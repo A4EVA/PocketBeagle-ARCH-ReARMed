@@ -1,5 +1,9 @@
 # PocketBeagle Arch Linux Installation
-This repository will help you to prepare a bootable arch linux sd card for the BeagleBone Black and Pocket Beagle the following instructions are different from the original one you'll find on: https://archlinuxarm.org/platforms/armv7/ti/beaglebone-black because in order to support the Pocket Beagle i have to compile myself u-boot in order to have it work properly with the Pocket Beagle SoM. The new compiled u-boot that you can find in this repository is bigger than the original one present into the arch tar file so the ext4 partition should start from 4096 and not 2048, this step is mandatory, because if the partition start at 2048 the following use od dd commands, needed to place the bootloader in the righ spot, will corrupt the partition and if you try to boot from the sd card u-boot will not find any ext4 filesystem. Following Instruction has been tested on Pocket Beagle and BeagleBone Black.
+This repository is the result of the work done on the forum Archlinuxarm (link:https://archlinuxarm.org/forum/viewtopic.php?f=9&t=14823) and will help you to prepare a bootable arch linux sd card for the BeagleBone Black and Pocket Beagle the following instructions are different from the original one you'll find on: https://archlinuxarm.org/platforms/armv7/ti/beaglebone-black because in order to support the Pocket Beagle i have to compile myself u-boot in order to have it work properly with the Pocket Beagle SoM. The new compiled u-boot that you can find in this repository is bigger than the original one present into the arch tar file so the ext4 partition should start from 4096 and not 2048, this step is mandatory, because if the partition start at 2048 the following use od dd commands, needed to place the bootloader in the righ spot, will corrupt the partition and if you try to boot from the sd card u-boot will not find any ext4 filesystem. Following Instruction has been tested on Pocket Beagle and BeagleBone Black. A special Thank YOU to summers for the precius help provided to troubleshoot the problems we encountered on the way.
+
+Credits:
+- TheJoker187
+- Summers
 
 # SD Card Preparation
 
