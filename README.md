@@ -1,4 +1,7 @@
 # PocketBeagle Arch Linux Installation
+This repository will help you to prepare a bootable arch linux sd card for the BeagleBone Black and Pocket Beagle the following instructions are different from the original one you'll find on: https://archlinuxarm.org/platforms/armv7/ti/beaglebone-black because in order to support the Pocket Beagle i have to compile myself u-boot in order to have it work properly with the Pocket Beagle SoM. The new compiled u-boot that you can find in this repository is bigger than the original one present into the arch tar file so the ext4 partition should start from 4096 and not 2048, this step is mandatory, because if the partition start at 2048 the following use od dd commands, needed to place the bootloader in the righ spot, will corrupt the partition and if you try to boot from the sd card u-boot will not find any ext4 filesystem. Following Instruction has been tested on Pocket Beagle and BeagleBone Black.
+
+# SD Card Preparation
 
 Replace sdX in the following instructions with the device name for the SD card as it appears on your computer.
 
@@ -49,3 +52,4 @@ Replace sdX in the following instructions with the device name for the SD card a
 
   - USB Ethernet Gadget Functionality
   - USB Serial Gadget Functionality 
+  - Script to automate all the passages above !
